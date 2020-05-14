@@ -1,0 +1,115 @@
+<section class="section section-filter">
+  <div class="container">
+    <h3 class="section-title">
+      <span class="ml-0 mr-auto">Filters</span>
+
+      <span class="btn btn-count btn-count-3" data-count="3">
+        <span></span>
+      </span>
+
+      <span class="btn btn-count btn-count-4 active" data-count="4">
+        <span></span>
+      </span>
+
+      <span class="btn btn-count btn-count-6" data-count="6">
+        <span></span>
+      </span>
+
+      <span id="sort-parent" class="form-group sort">
+        <label for="sort">Sort by: </label>
+
+        <select id="sort" class="select2" name="sort" title="sort">
+          <option value="name_asc">A to Z</option>
+          <option value="name_desc">Z to A</option>
+          <option value="watched_asc">Most Watched</option>
+          <option value="rated_asc">Highest Rated</option>
+          <option value="date_asc">Newer First</option>
+          <option value="date_desc">Older First</option>
+          <option value="price_desc">Price (High to Low)</option>
+          <option value="price_asc">Price (Low to High)</option>
+        </select>
+      </span>
+
+      <span class="d-md-none d-flex ml-2 mr-0">
+        <a class="btn btn-light" data-toggle="collapse" href="#filter-form" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+            <path
+              d="M4 10h7.09a6 6 0 0 0 11.82 0H44a1 1 0 0 0 0-2H22.91A6 6 0 0 0 11.09 8H4a1 1 0 0 0 0 2zM17 5a4 4 0 1 1-4 4A4 4 0 0 1 17 5zM44 23H36.91a6 6 0 0 0-11.82 0H4a1 1 0 0 0 0 2H25.09a6 6 0 0 0 11.82 0H44a1 1 0 0 0 0-2zM31 28a4 4 0 1 1 4-4A4 4 0 0 1 31 28zM44 38H22.91a6 6 0 0 0-11.82 0H4a1 1 0 0 0 0 2h7.09a6 6 0 0 0 11.82 0H44a1 1 0 0 0 0-2zM17 43a4 4 0 1 1 4-4A4 4 0 0 1 17 43z"></path>
+          </svg>
+        </a>
+      </span>
+    </h3>
+
+    <div id="filter-form" class="filter-form collapse">
+      <div class="form-group">
+        <label for="search">Search</label>
+
+        <div class="search-group">
+          <input id="search" type="search" placeholder="Search here..." name="search">
+          <button class="btn btn-none"><img src="../../images/icon/magnifier.svg" alt="magnifier"></button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="contenttype">Content Type</label>
+
+        <select id="contenttype" class="select2" name="contenttype">
+          <option value="all" selected>Show All</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="category">Categories</label>
+
+        <select id="category" class="select2" name="category">
+          <option value="all" selected>Show All</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="author">Authors</label>
+
+        <select id="author" class="select2" name="author">
+          <option value="all" selected>Show All</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="level">Level</label>
+
+        <select id="level" class="select2" name="level">
+          <option value="all" selected>Show All</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="software">Software</label>
+
+        <select id="software" class="select2" name="software">
+          <option value="all" selected>Show All</option>
+        </select>
+      </div>
+
+      <div class="form-group price-group">
+        <label for="range-wrapper">Price</label>
+
+        <div class="d-flex flex-row justify-content-start align-items-stretch">
+          <div id="range-wrapper" class="range-wrapper">
+            <span class="range-min">1$</span>
+            <div class="range"></div>
+            <span class="range-max">750$</span>
+          </div>
+
+          <button id="price" class="btn btn-outline-success text-uppercase">Free</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="filter-result">
+      <ul style="display: none;">
+        <li id="clear" class="btn text-uppercase">Clear All (<span></span>)</li>
+      </ul>
+    </div>
+  </div>
+</section>

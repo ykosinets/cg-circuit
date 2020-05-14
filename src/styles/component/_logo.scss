@@ -1,0 +1,34 @@
+.logo {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  user-select: none;
+  white-space: nowrap;
+  z-index: $zindex-fixed - 1;
+  position: relative;
+  font-size: 16px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+    align-items: flex-start;
+  }
+
+  svg {
+    transition: .2s filter ease-in-out;
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  }
+
+  path {
+    fill: #fff;
+    transition: .2s fill ease-in-out;
+  }
+
+  &:hover {
+    svg{
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .2));
+    }
+  }
+}

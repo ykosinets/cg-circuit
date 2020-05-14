@@ -1,0 +1,179 @@
+:root {
+  @include interpolate(--phone-gap, md, xxl, 40px, 149px);
+}
+
+.phone {
+  position: relative;
+  width: 175px;
+  min-width: 175px;
+  user-select: none;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(md) {
+    width: 250px;
+    min-width: 250px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 350px;
+    min-width: 350px;
+  }
+
+  &:after {
+    content: '';
+    position: relative;
+    display: block;
+    height: 0;
+    width: 0;
+    padding-bottom: 200%;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin: 0 40px 0 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-right: var(--phone-gap);
+  }
+
+  &-rotate-left .phone {
+    transform: rotate(-12deg);
+
+    @include media-breakpoint-up(md) {
+      transform-origin: center bottom;
+    }
+  }
+
+  &-rotate-right .phone {
+    transform: rotate(8deg);
+
+    @include media-breakpoint-up(md) {
+      transform-origin: center bottom;
+    }
+  }
+
+  .device {
+    position: absolute;
+    left: -8.6%;
+    top: -0.65%;
+    width: 160%;
+  }
+
+  .btn-play {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      opacity: 1;
+    }
+
+    &:before {
+      border-left: 16px solid $white;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: none;
+      z-index: 2;
+      margin-left: 2px;
+      will-change: opcaity;
+      transition: .3s opacity ease-in-out;
+    }
+
+    &:after {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      background: rgba($dark, 0);
+      border: 2px solid $white;
+      backdrop-filter: blur(0);
+      z-index: 1;
+      will-change: background, transform, backdrop-filter;
+      transition: .2s background ease-in-out,
+      .3s backdrop-filter ease-in-out,
+      .3s transform ease-in-out;
+      box-shadow: 0 0 0 0 $white;
+      animation: 3s pulse 0s infinite linear;
+    }
+
+    &:hover:after {
+      backdrop-filter: blur(5px);
+      background: rgba($primary, .2);
+    }
+  }
+
+  .magnifier {
+    position: absolute;
+    left: 50%;
+    bottom: 9%;
+    transform: translate(-50%, 0);
+    width: 133%;
+
+    &-image{
+      background-size: cover;
+      overflow: hidden;
+      border-radius: 100%;
+      position: absolute;
+      left: 7.5%;
+      right: 7.5%;
+      top: 5.65%;
+      z-index: 10;
+
+      &:after {
+        content: '';
+        position: relative;
+        display: block;
+        height: 0;
+        width: 0;
+        padding-bottom: 100%;
+      }
+    }
+
+    img {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto;
+      z-index: 20;
+    }
+  }
+}
+
+.hidden-video {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+
+$pulse-size: 50;
+$pulse-opacity: .5;
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($white, $pulse-opacity), 0 0 0 0 rgba($white, $pulse-opacity), 0 0 0 0 rgba($white, $pulse-opacity);
+  }
+  15% {
+    box-shadow: 0 0 0 #{$pulse-size * .5}px rgba($white, $pulse-opacity * .5), 0 0 0 0 rgba($white, $pulse-opacity), 0 0 0 0 rgba($white, $pulse-opacity);
+  }
+  30% {
+    box-shadow: 0 0 0 #{$pulse-size}px rgba($white, 0), 0 0 0 #{$pulse-size * .5}px rgba($white, $pulse-opacity * .5), 0 0 0 0 rgba($white, $pulse-opacity);
+  }
+  45% {
+    box-shadow: 0 0 0 #{$pulse-size}px rgba($white, 0), 0 0 0 #{$pulse-size}px rgba($white, 0), 0 0 0 #{$pulse-size * .5}px rgba($white, $pulse-opacity * .5);
+  }
+  60%,
+  100% {
+    box-shadow: 0 0 0 #{$pulse-size}px rgba($white, 0), 0 0 0 #{$pulse-size}px rgba($white, 0), 0 0 0 #{$pulse-size}px rgba($white, 0);
+  }
+}

@@ -1,0 +1,24 @@
+.section-hero {
+  padding: 24px 0 0 0;
+
+  .section-title {
+    margin: 0 0 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    a {
+      color: $grey-dark;
+      text-transform: uppercase;
+      text-decoration: none !important;
+      font-size: 12px;
+      font-weight: 400;
+      transition: .2s color ease-in-out;
+
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+}

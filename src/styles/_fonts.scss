@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url('#{$path-font}/Helvetica/Bold/Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/Helvetica/Bold/Helvetica-Bold.woff') format('woff'),
+  url('#{$path-font}/Helvetica/Bold/Helvetica-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('#{$path-font}/Helvetica/Regular/Helvetica-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/Helvetica/Regular/Helvetica-Regular.woff') format('woff'),
+  url('#{$path-font}/Helvetica/Regular/Helvetica-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('#{$path-font}/HelveticaNeue/Heavy/HelveticaNeue-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/HelveticaNeue/Heavy/HelveticaNeue-Heavy.woff') format('woff'),
+  url('#{$path-font}/HelveticaNeue/Heavy/HelveticaNeue-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('#{$path-font}/HelveticaNeue/Light/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/HelveticaNeue/Light/HelveticaNeue-Light.woff') format('woff'),
+  url('#{$path-font}/HelveticaNeue/Light/HelveticaNeue-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('#{$path-font}/HelveticaNeue/Medium/HelveticaNeue-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/HelveticaNeue/Medium/HelveticaNeue-Medium.woff') format('woff'),
+  url('#{$path-font}/HelveticaNeue/Medium/HelveticaNeue-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms';
+  src: url('#{$path-font}/TTNorms/Medium/TTNorms-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/TTNorms/Medium/TTNorms-Medium.woff') format('woff'),
+  url('#{$path-font}/TTNorms/Medium/TTNorms-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms';
+  src: url('#{$path-font}/TTNorms/Regular/TTNorms-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/TTNorms/Regular/TTNorms-Regular.woff') format('woff'),
+  url('#{$path-font}/TTNorms/Regular/TTNorms-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,206 @@
+.slider {
+  margin: 0;
+  font-size: 0;
+
+  &-wrapper {
+    position: relative;
+    padding-left: $grid-gutter-width / 4;
+    padding-right: $grid-gutter-width / 4;
+
+    @each $key, $size in $container-max-widths {
+      @include media-breakpoint-up($key) {
+        padding-left: calc(50% - #{$size / 2 - $grid-gutter-width / 4});
+        padding-right: calc(50% - #{$size / 2 - $grid-gutter-width / 4});
+      }
+    }
+  }
+
+  &-item {
+    padding-left: $grid-gutter-width / 4;
+    padding-right: $grid-gutter-width / 4;
+    cursor: pointer;
+
+    a {
+      display: block;
+      pointer-events: none;
+      width: 100%;
+      height: auto;
+      min-height: 160px;
+      border-radius: $card-border-radius;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background: transparent;
+        transition: .3s background-color ease-in-out;
+      }
+
+      &:hover:before {
+        background: rgba($navy, .3);
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      z-index: 3;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .slick-list {
+    overflow: visible !important;
+  }
+
+  .slick-current a {
+    pointer-events: auto;
+  }
+
+  &-dots {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+
+    @include media-breakpoint-up(sm) {
+      bottom: 4px;
+    }
+
+    @include media-breakpoint-up(md) {
+      bottom: 14px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      bottom: 24px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      bottom: 34px;
+    }
+
+    .slick-dots {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      pointer-events: auto;
+    }
+
+    li {
+      display: block;
+      opacity: 0.5;
+      padding: 0;
+      margin: 0;
+    }
+
+    li.slick-active {
+      opacity: 1;
+    }
+
+    button {
+      @extend .btn-none;
+      display: block;
+      position: relative;
+      font-size: 0;
+      padding: 0;
+      width: 16px;
+      height: 16px;
+
+      &:after {
+        content: '';
+        border-radius: 100%;
+        display: block;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        background: $white;
+        @extend .center;
+      }
+    }
+  }
+
+  &-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s opacity ease-in-out;
+
+    .slider-wrapper:hover & {
+      opacity: 1;
+    }
+
+    button {
+      pointer-events: auto;
+      @extend .btn-none;
+      height: 100%;
+      padding: 0;
+      min-width: 56px;
+
+      @each $key, $size in $container-max-widths {
+        @include media-breakpoint-up($key) {
+          width: calc(50% - #{$size / 2});
+        }
+      }
+
+      svg {
+        filter: drop-shadow(0 0 4px rgba($black, .5));
+        will-change: transform;
+        transition: .2s transform ease-in-out;
+      }
+
+      svg path {
+        fill: rgba($white, .3);
+        will-change: fill;
+        transition: .2s fill ease-in-out;
+      }
+
+      &:hover svg path {
+        fill: $white;
+      }
+    }
+
+    .slick-prev svg {
+      transform: translate(0, 0) rotate(-180deg);
+    }
+
+    .slick-prev:hover svg {
+      transform: translate(-10px, 0) rotate(-180deg);
+    }
+
+    .slick-next:hover svg {
+      transform: translate(10px, 0);
+    }
+  }
+}

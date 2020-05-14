@@ -1,0 +1,64 @@
+:root {
+  @include interpolate(--h1, sm, xxl, 38px, 44px);
+  @include interpolate(--h2, sm, xxl, 32px, 38px);
+  @include interpolate(--h3, sm, xxl, 18px, 20px);
+  @include interpolate(--h4, sm, xxl, 24.4px, 28.4px);
+  @include interpolate(--h5, sm, xxl, 14px, 24.4px);
+  @include interpolate(--h6, sm, xxl, 14px, 18px);
+  @include interpolate(--p, sm, xxl, 14px, 16px);
+  @include interpolate(--section-title, sm, xxl, 16px, 20px);
+  @include interpolate(--subtitle, sm, xxl, 16px, 20px);
+  @include interpolate(--description, sm, xxl, 18px, 24px);
+}
+
+h1, .h1 {
+  font-size: var(--h1);
+}
+
+h2, .h2 {
+  font-size: var(--h2);
+}
+
+h3, .h3 {
+  font-size: var(--h3);
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+}
+
+h4, .h4 {
+  font-size: var(--h4);
+}
+
+h5, .h5 {
+  font-size: var(--h5);
+}
+
+h6, .h6 {
+  font-size: var(--h6);
+}
+
+.subtitle {
+  font-size: var(--subtitle);
+  font-weight: 300;
+  line-height: 1.23;
+  letter-spacing: 0.024em;
+}
+
+.section-title{
+  font-size: var(--section-title);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+p, .p {
+  font-size: var(--p);
+}
+
+small {
+
+}
+
+mark {
+  background: transparent;
+  color: $primary;
+}

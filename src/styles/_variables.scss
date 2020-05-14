@@ -1,0 +1,157 @@
+// fonts
+$helvetica: 'Helvetica', sans-serif;
+$helvetica-neue: 'HelveticaNeue', sans-serif;
+$ttnorms: 'TTNorms', sans-serif;
+
+// paths
+$path: (
+  font: '../fonts',
+  img: '../images'
+);
+
+$path-font: map-get($path, font);
+$path-img: map-get($path, img);
+// colors
+$white: #fff;
+$black: #000;
+$blue-dark: #337ab7;
+$navy: #001f33;
+$navy-light: #515b62;
+$grey-dark: #9d9d9d;
+$grey: #d6d6d6;
+$grey-light: #ededed;
+$placeholder-bg: #a7b1b8;
+$silent: rgba($white, .2);
+
+$primary: #33b5e5;
+$secondary: $grey-dark;
+$success: #45c469;
+$warning: #ffa500;
+$danger: #f56421;
+$dark: #222222;
+
+// states
+$state-active: '&:hover, &:focus, &:active, &:active:hover, &:active:focus';
+
+//3rd party assets
+//bootstrap
+$yiq-text-dark: $white;
+$font-family-base: $helvetica-neue;
+$headings-font-weight: 700;
+$enable-shadows: false;
+$body-bg: #f9f9f9;
+
+//inputs
+$input-line-height: 1;
+$input-border-radius: 10px;
+$input-border-width: 0;
+$input-padding-x: 2rem;
+$input-padding-y: 1rem;
+$input-font-size: 1rem;
+
+$input-line-height-lg: 1;
+$input-border-radius-lg: 10px;
+$input-border-width-lg: 0;
+$input-padding-x-lg: 32px;
+$input-padding-y-lg: 18px;
+$input-font-size-lg: 1.125rem;
+
+//buttons
+$btn-white-space: nowrap;
+$btn-border-width: 0;
+$btn-font-weight: 500;
+$btn-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+
+$btn-border-width: 1px;
+
+$btn-font-size: .875rem;
+$btn-border-radius: 4px;
+$btn-line-height: 1;
+$btn-padding-x: 15px;
+$btn-padding-y: 9px;
+
+$btn-font-size-lg: .875rem;
+$btn-border-radius-lg: 4px;
+$btn-line-height-lg: 1;
+$btn-padding-x-lg: 25px;
+$btn-padding-y-lg: 12px;
+
+// navbar
+$link-color: $grey-dark;
+
+//dropdown
+$dropdown-border-radius: 0;
+$dropdown-bg: $dark;
+$dropdown-border-width: 0;
+$dropdown-spacer: 0;
+$dropdown-item-padding-y: .5rem;
+$dropdown-item-padding-x: 26px;
+$dropdown-padding-y: 0;
+$dropdown-link-color: $grey;
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: $primary;
+$dropdown-link-active-color: $primary;
+$dropdown-link-active-bg: $dark;
+$dropdown-link-disabled-color: $grey-dark;
+$dropdown-font-size: 12px;
+
+// form controls
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+$input-border-radius: 4px;
+
+// card
+$card-cap-bg: $white;
+$card-border-width: 0;
+$card-border-radius: 10px;
+$card-bg: $white;
+$card-spacer-x: 0;
+$card-spacer-y: 0;
+
+// badge
+$badge-border-radius: 4px;
+$badge-font-size: 10px;
+$badge-font-weight: 500;
+$badge-padding-x: 8px;
+$badge-padding-y: 5px;
+
+// modal
+$zindex-modal: 1080;
+$modal-header-border-width: 0;
+$modal-header-padding-y: .75rem;
+$modal-header-padding-x: .75rem;
+$modal-inner-padding: .75rem;
+$modal-footer-border-width: 0;
+$modal-footer-margin-between: .75rem;
+$modal-title-line-height: 1;
+$modal-content-border-width: 0;
+$modal-content-border-radius: 10px;
+$modal-dialog-margin-y-sm-up: 12.5%;
+
+//popovers
+$popover-arrow-color: $navy;
+$popover-border-width: 0;
+$popover-bg: $navy;
+$popover-body-color: $white;
+$popover-max-width: 280px;
+
+//bootstrap:grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1470px,
+  xxl: 1920px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1470px
+) !default;
+
+
+// select2

@@ -1,0 +1,23 @@
+<section class="section section-hero">
+  <div class="container collapse hero-expandable" aria-expanded="false">
+    <h3 class="section-title justify-content-center">
+      <a class="show-carousel" data-toggle="collapse" href="#" role="button"
+         aria-expanded="true" data-target=".hero-expandable">
+        Show Top Products
+      </a>
+    </h3>
+  </div>
+
+  <div class="collapse hero-expandable show" aria-expanded="true">
+    <div class="container">
+      <h3 class="section-title">Top Products
+        <a class="hide-carousel" data-toggle="collapse" href="#" role="button"
+           aria-expanded="false" data-target=".hero-expandable">
+          Hide Carousel
+        </a>
+      </h3>
+    </div>
+
+    ${require('../component/slider.html').default}
+  </div>
+</section>

@@ -1,0 +1,12 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+img{
+  user-select: none;
+}
+
+//css vars
+:root {
+}

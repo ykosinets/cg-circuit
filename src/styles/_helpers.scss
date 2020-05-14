@@ -1,0 +1,122 @@
+@function calc-interpolation($min-screen, $min-value, $max-screen, $max-value, $important: false) {
+  @if (map-has-key($grid-breakpoints, $min-screen)) {
+    $min-screen: map-get($grid-breakpoints, $min-screen)
+  }
+
+  @if (map-has-key($grid-breakpoints, $max-screen)) {
+    $max-screen: map-get($grid-breakpoints, $max-screen)
+  }
+
+  $a: ($max-value - $min-value) / ($max-screen - $min-screen);
+  $b: $min-value - $a * $min-screen;
+
+  $sign: " + ";
+  @if ($b < 0) {
+    $sign: " - ";
+    $b: abs($b);
+  }
+
+  $res: calc(#{$a*100}vw#{$sign}#{$b});
+
+  @if ($important == true) {
+    $res: #{$res} #{' !important'};
+  }
+
+  @return $res;
+}
+
+@mixin interpolate($properties, $min-screen, $max-screen, $min-value, $max-value, $important: false) {
+  @if (map-has-key($grid-breakpoints, $min-screen)) {
+    $min-screen: map-get($grid-breakpoints, $min-screen)
+  }
+
+  @if (map-has-key($grid-breakpoints, $max-screen)) {
+    $max-screen: map-get($grid-breakpoints, $max-screen)
+  }
+
+  & {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
+
+    @media screen and (min-width: $min-screen) {
+      @each $property in $properties {
+        #{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value, $important);
+      }
+    }
+
+    @media screen and (min-width: $max-screen) {
+      @each $property in $properties {
+        @if ($important == true) {
+          #{$property} : #{$max-value} #{' !important'};
+        } @else {
+          #{$property}: $max-value;
+        }
+      }
+    }
+  }
+}
+
+$rect-sizes: (
+  '1x1': 100,
+  '1x2': 50,
+  '3x4': 75,
+  '9x16': 56.25,
+);
+
+@mixin rect($size, $position: 'relative', $before: true) {
+  @if ($before != true) {
+    $pseudo: after;
+  }
+
+  $pseudo: before !default;
+
+  @if (map-has-key($rect-sizes, $size)) {
+    position: $position;
+
+    &:#{$pseudo} {
+      content: '';
+      position: relative;
+      display: block;
+      width: 100%;
+      pointer-events: none;
+      padding-bottom: map-get($rect-sizes, $size);
+    }
+
+    &-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @extend .fs !optional;
+    }
+  } @else {
+    @error "Size is not specified";
+  }
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin selection($c){
+  *::-moz-selection {
+    background: $c;
+  }
+  *::selection {
+    background: $c;
+  }
+}
