@@ -1,5 +1,5 @@
 <header class="page-header">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navigation">
       <div class="navigation-brand">
         ${require('../component/logo.html').default}
@@ -12,15 +12,773 @@
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Browse
             </a>
+
             <div class="dropdown-menu" aria-labelledby="navbarDropdownBrowse">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="/browsepage.php">
+                <img src="../../images/icon/browse-all-categories.png" alt="icon">
+                Browse All...
+              </a>
+
+              <a class="dropdown-item" href="/browsepage.php?exclusiveContent=yes">
+                <i class="fas fa-star"></i>
+                Browse Exclusive Content
+              </a>
+
+              <h6 class="dropdown-header">CATEGORIES</h6>
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=1">
+                  <img src="../../images/icon/traditional-arts.png" alt="icon">
+                  Traditional
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=1&subcategory=17">Drawing</a></li>
+                        <li><a href="/browsepage.php?category=1&subcategory=18">Anatomy</a></li>
+                        <li><a href="/browsepage.php?category=1&subcategory=19">Painting</a></li>
+                        <li><a href="/browsepage.php?category=1&subcategory=20">History</a></li>
+                        <li><a href="/browsepage.php?category=1&subcategory=21">Design</a></li>
+                        <li><a href="/browsepage.php?category=1&subcategory=22">Sculpting</a></li>
+                        <li><a href="/browsepage.php?category=1&subcategory=23">Color Theory</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=1">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=1&author=34">Marty Davis</a></li>
+                        <li><a href="/browsepage.php?category=1&author=100">Bob Wallace</a></li>
+                        <li><a href="/browsepage.php?category=1&author=366">Gary Myers</a></li>
+                        <li><a href="/browsepage.php?category=1&author=6028">Fabrizio Bortolussi</a></li>
+                        <li><a href="/browsepage.php?category=1&author=7055">Timothy Morebu</a></li>
+                        <li><a href="/browsepage.php?category=1&author=13998">Kalen Chock</a></li>
+                        <li><a href="/browsepage.php?category=1&author=14445">Michael Lim</a></li>
+                        <li><a href="/browsepage.php?category=1&author=14718">David Colman</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=1">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=1&software=4">ZBrush</a></li>
+                        <li><a href="/browsepage.php?category=1&software=8">Photoshop</a></li>
+                        <li><a href="/browsepage.php?category=1&software=21">None</a></li>
+                        <li><a href="/browsepage.php?category=1&software=97">Pencil</a></li>
+                        <li><a href="/browsepage.php?category=1&software=98">Eraser</a></li>
+                        <li><a href="/browsepage.php?category=1&software=120">photoshop cc</a></li>
+                        <li><a href="/browsepage.php?category=1&software=133">paper</a></li>
+                        <li><a href="/browsepage.php?category=1&software=135">Adobe Photoshop</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=1">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=2">
+                  <img src="../../images/icon/digital-2d.png" alt="icon">
+                  Digital 2D
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=2&subcategory=24">Essentials</a></li>
+                        <li><a href="/browsepage.php?category=2&subcategory=25">Graphic Design</a></li>
+                        <li><a href="/browsepage.php?category=2&subcategory=26">Web Design</a></li>
+                        <li><a href="/browsepage.php?category=2&subcategory=27">Illustration</a></li>
+                        <li><a href="/browsepage.php?category=2&subcategory=28">Digital Painting</a></li>
+                        <li><a href="/browsepage.php?category=2&subcategory=29">Image Editing</a></li>
+                        <li><a href="/browsepage.php?category=2&subcategory=30">Concept Design</a></li>
+                        <li><a href="/browsepage.php?category=2&subcategory=77">Compositing</a></li>
+                        <li><a href="/browsepage.php?category=2&subcategory=82">Rendering</a></li>
+                        <li><a href="/browsepage.php?category=2&subcategory=83">Photogrammetry</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=2">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=2&author=101">Landis Fields</a></li>
+                        <li><a href="/browsepage.php?category=2&author=366">Gary Myers</a></li>
+                        <li><a href="/browsepage.php?category=2&author=702">Peter Hartwig</a></li>
+                        <li><a href="/browsepage.php?category=2&author=943">Rosa Farre</a></li>
+                        <li><a href="/browsepage.php?category=2&author=3736">D. Gill</a></li>
+                        <li><a href="/browsepage.php?category=2&author=3899">Phillip Reeves</a></li>
+                        <li><a href="/browsepage.php?category=2&author=5402">Christopher Bonura</a></li>
+                        <li><a href="/browsepage.php?category=2&author=5581">Carlo LLC</a></li>
+                        <li><a href="/browsepage.php?category=2&author=5896">Oscar Dominguez</a></li>
+                        <li><a href="/browsepage.php?category=2&author=6502">Mark Trego</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=2">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=2&software=1">Autodesk Maya</a></li>
+                        <li><a href="/browsepage.php?category=2&software=8">Photoshop</a></li>
+                        <li><a href="/browsepage.php?category=2&software=9">After Effects</a></li>
+                        <li><a href="/browsepage.php?category=2&software=21">None</a></li>
+                        <li><a href="/browsepage.php?category=2&software=24">3dsMax</a></li>
+                        <li><a href="/browsepage.php?category=2&software=33">Cinema 4D</a></li>
+                        <li><a href="/browsepage.php?category=2&software=37">CSS</a></li>
+                        <li><a href="/browsepage.php?category=2&software=38">Dreamweaver</a></li>
+                        <li><a href="/browsepage.php?category=2&software=45">FumeFX</a></li>
+                        <li><a href="/browsepage.php?category=2&software=50">Houdini</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=2">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=3">
+                  <img src="../../images/icon/digital-3d.png" alt="icon">
+                  Digital 3D
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=3&subcategory=31">Essentials</a></li>
+                        <li><a href="/browsepage.php?category=3&subcategory=32">Modeling</a></li>
+                        <li><a href="/browsepage.php?category=3&subcategory=33">Sculpting</a></li>
+                        <li><a href="/browsepage.php?category=3&subcategory=34">Texturing</a></li>
+                        <li><a href="/browsepage.php?category=3&subcategory=35">Rigging</a></li>
+                        <li><a href="/browsepage.php?category=3&subcategory=36">Animation</a></li>
+                        <li><a href="/browsepage.php?category=3&subcategory=37">General Pipeline</a></li>
+                        <li><a href="/browsepage.php?category=3&subcategory=38">Operating systems</a></li>
+                        <li><a href="/browsepage.php?category=3&subcategory=39">Plugin Development</a></li>
+                        <li><a href="/browsepage.php?category=3&subcategory=78">FXs</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=3">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=3&author=35">Carlo Sansonetti</a></li>
+                        <li><a href="/browsepage.php?category=3&author=84">David Lisbe</a></li>
+                        <li><a href="/browsepage.php?category=3&author=101">Landis Fields</a></li>
+                        <li><a href="/browsepage.php?category=3&author=112">Saber Jlassi</a></li>
+                        <li><a href="/browsepage.php?category=3&author=118">Hani Mohammadi</a></li>
+                        <li><a href="/browsepage.php?category=3&author=131">Hai Phan</a></li>
+                        <li><a href="/browsepage.php?category=3&author=207">Joe Breeden</a></li>
+                        <li><a href="/browsepage.php?category=3&author=591">Jeremy Raven</a></li>
+                        <li><a href="/browsepage.php?category=3&author=702">Peter Hartwig</a></li>
+                        <li><a href="/browsepage.php?category=3&author=855">Carl Culberson</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=3">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=3&software=1">Autodesk Maya</a></li>
+                        <li><a href="/browsepage.php?category=3&software=2">3D Studio MAX</a></li>
+                        <li><a href="/browsepage.php?category=3&software=4">ZBrush</a></li>
+                        <li><a href="/browsepage.php?category=3&software=5">Mudbox</a></li>
+                        <li><a href="/browsepage.php?category=3&software=8">Photoshop</a></li>
+                        <li><a href="/browsepage.php?category=3&software=9">After Effects</a></li>
+                        <li><a href="/browsepage.php?category=3&software=12">Python</a></li>
+                        <li><a href="/browsepage.php?category=3&software=21">None</a></li>
+                        <li><a href="/browsepage.php?category=3&software=24">3dsMax</a></li>
+                        <li><a href="/browsepage.php?category=3&software=30">Bodypaint 3d</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=3">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=4">
+                  <img src="../../images/icon/video.png" alt="icon">
+                  Video
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=4&subcategory=56">Essentials</a></li>
+                        <li><a href="/browsepage.php?category=4&subcategory=57">Editing</a></li>
+                        <li><a href="/browsepage.php?category=4&subcategory=58">Cinematography</a></li>
+                        <li><a href="/browsepage.php?category=4&subcategory=59">Equipment how-to</a></li>
+                        <li><a href="/browsepage.php?category=4&subcategory=60">Directing</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=4">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=4&author=9428">Michael Stark</a></li>
+                        <li><a href="/browsepage.php?category=4&author=14692">TimJ Design</a></li>
+                        <li><a href="/browsepage.php?category=4&author=15382">Sonja Geracsek</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=4">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=4&software=1">Autodesk Maya</a></li>
+                        <li><a href="/browsepage.php?category=4&software=4">ZBrush</a></li>
+                        <li><a href="/browsepage.php?category=4&software=8">Photoshop</a></li>
+                        <li><a href="/browsepage.php?category=4&software=99">UDK</a></li>
+                        <li><a href="/browsepage.php?category=4&software=101">Unreal 4</a></li>
+                        <li><a href="/browsepage.php?category=4&software=102">Substance</a></li>
+                        <li><a href="/browsepage.php?category=4&software=131">adobe</a></li>
+                        <li><a href="/browsepage.php?category=4&software=139">Adobe After Effects</a></li>
+                        <li><a href="/browsepage.php?category=4&software=140">Adobe Illustrator</a></li>
+                        <li><a href="/browsepage.php?category=4&software=141">Adobe Media Encoder</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=4">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=5">
+                  <img src="../../images/icon/scripting.png" alt="icon">
+                  Scripting
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=5&subcategory=61">Essentials</a></li>
+                        <li><a href="/browsepage.php?category=5&subcategory=62">For Modeling</a></li>
+                        <li><a href="/browsepage.php?category=5&subcategory=63">For Rigging</a></li>
+                        <li><a href="/browsepage.php?category=5&subcategory=80">UI Development</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=5">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=5&author=35">Carlo Sansonetti</a></li>
+                        <li><a href="/browsepage.php?category=5&author=106">Mario Capellari</a></li>
+                        <li><a href="/browsepage.php?category=5&author=115">Geordie Martinez</a></li>
+                        <li><a href="/browsepage.php?category=5&author=314">Jeremy Ernst</a></li>
+                        <li><a href="/browsepage.php?category=5&author=614">Chayan Vinayak</a></li>
+                        <li><a href="/browsepage.php?category=5&author=5581">Carlo LLC</a></li>
+                        <li><a href="/browsepage.php?category=5&author=6502">Mark Trego</a></li>
+                        <li><a href="/browsepage.php?category=5&author=12946">Daniel Scott</a></li>
+                        <li><a href="/browsepage.php?category=5&author=15382">Sonja Geracsek</a></li>
+                        <li><a href="/browsepage.php?category=5&author=16272">Edward Boateng</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=5">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=5&software=1">Autodesk Maya</a></li>
+                        <li><a href="/browsepage.php?category=5&software=12">Python</a></li>
+                        <li><a href="/browsepage.php?category=5&software=14">Qt Designer</a></li>
+                        <li><a href="/browsepage.php?category=5&software=21">None</a></li>
+                        <li><a href="/browsepage.php?category=5&software=38">Dreamweaver</a></li>
+                        <li><a href="/browsepage.php?category=5&software=50">Houdini</a></li>
+                        <li><a href="/browsepage.php?category=5&software=52">Illustrator</a></li>
+                        <li><a href="/browsepage.php?category=5&software=73">Pymel</a></li>
+                        <li><a href="/browsepage.php?category=5&software=74">PyQt</a></li>
+                        <li><a href="/browsepage.php?category=5&software=109">Vim</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=5">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=6">
+                  <img src="../../images/icon/programming.png" alt="icon">
+                  Programming
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=6&subcategory=40">Essentials</a></li>
+                        <li><a href="/browsepage.php?category=6&subcategory=41">Plugin Development</a></li>
+                        <li><a href="/browsepage.php?category=6&subcategory=42">Network</a></li>
+                        <li><a href="/browsepage.php?category=6&subcategory=43">Graphics</a></li>
+                        <li><a href="/browsepage.php?category=6&subcategory=44">Game Programming</a></li>
+                        <li><a href="/browsepage.php?category=6&subcategory=81">UI Development</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=6">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=6&author=35">Carlo Sansonetti</a></li>
+                        <li><a href="/browsepage.php?category=6&author=102">Chad Vernon</a></li>
+                        <li><a href="/browsepage.php?category=6&author=106">Mario Capellari</a></li>
+                        <li><a href="/browsepage.php?category=6&author=115">Geordie Martinez</a></li>
+                        <li><a href="/browsepage.php?category=6&author=130">Damon Connolly</a></li>
+                        <li><a href="/browsepage.php?category=6&author=196">Mark Pope</a></li>
+                        <li><a href="/browsepage.php?category=6&author=314">Jeremy Ernst</a></li>
+                        <li><a href="/browsepage.php?category=6&author=614">Chayan Vinayak</a></li>
+                        <li><a href="/browsepage.php?category=6&author=4587">Leo G.</a></li>
+                        <li><a href="/browsepage.php?category=6&author=5119">Tom Mooney</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=6">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=6&software=1">Autodesk Maya</a></li>
+                        <li><a href="/browsepage.php?category=6&software=4">ZBrush</a></li>
+                        <li><a href="/browsepage.php?category=6&software=8">Photoshop</a></li>
+                        <li><a href="/browsepage.php?category=6&software=12">Python</a></li>
+                        <li><a href="/browsepage.php?category=6&software=14">Qt Designer</a></li>
+                        <li><a href="/browsepage.php?category=6&software=15">Visual Studio</a></li>
+                        <li><a href="/browsepage.php?category=6&software=17">C++</a></li>
+                        <li><a href="/browsepage.php?category=6&software=21">None</a></li>
+                        <li><a href="/browsepage.php?category=6&software=38">Dreamweaver</a></li>
+                        <li><a href="/browsepage.php?category=6&software=52">Illustrator</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=6">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=7">
+                  <img src="../../images/icon/game-design.png" alt="icon">
+                  Game Design
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=7&subcategory=52">Essentials</a></li>
+                        <li><a href="/browsepage.php?category=7&subcategory=53">Programming</a></li>
+                        <li><a href="/browsepage.php?category=7&subcategory=54">Game Design</a></li>
+                        <li><a href="/browsepage.php?category=7&subcategory=55">Mobile Gaming</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=7">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=7&author=3899">Phillip Reeves</a></li>
+                        <li><a href="/browsepage.php?category=7&author=4587">Leo G.</a></li>
+                        <li><a href="/browsepage.php?category=7&author=5119">Tom Mooney</a></li>
+                        <li><a href="/browsepage.php?category=7&author=6502">Mark Trego</a></li>
+                        <li><a href="/browsepage.php?category=7&author=9346">Matthew Skonicki</a></li>
+                        <li><a href="/browsepage.php?category=7&author=10140">Tyler Bay</a></li>
+                        <li><a href="/browsepage.php?category=7&author=16272">Edward Boateng</a></li>
+                        <li><a href="/browsepage.php?category=7&author=18034">Radu Cius</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=7">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=7&software=1">Autodesk Maya</a></li>
+                        <li><a href="/browsepage.php?category=7&software=4">ZBrush</a></li>
+                        <li><a href="/browsepage.php?category=7&software=8">Photoshop</a></li>
+                        <li><a href="/browsepage.php?category=7&software=12">Python</a></li>
+                        <li><a href="/browsepage.php?category=7&software=50">Houdini</a></li>
+                        <li><a href="/browsepage.php?category=7&software=86">Unity</a></li>
+                        <li><a href="/browsepage.php?category=7&software=99">UDK</a></li>
+                        <li><a href="/browsepage.php?category=7&software=101">Unreal 4</a></li>
+                        <li><a href="/browsepage.php?category=7&software=102">Substance</a></li>
+                        <li><a href="/browsepage.php?category=7&software=105">Substance Designer</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=7">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=8">
+                  <img src="../../images/icon/photography.png" alt="icon">
+                  Photography
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=8&subcategory=45">Essentials</a></li>
+                        <li><a href="/browsepage.php?category=8&subcategory=46">Equipment how-to</a></li>
+                        <li><a href="/browsepage.php?category=8&subcategory=47">Lighting</a></li>
+                        <li><a href="/browsepage.php?category=8&subcategory=48">Composition</a></li>
+                        <li><a href="/browsepage.php?category=8&subcategory=49">CritiquesDynamics</a></li>
+                        <li><a href="/browsepage.php?category=8&subcategory=50">Lighting</a></li>
+                        <li><a href="/browsepage.php?category=8&subcategory=51">Rendering</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=8">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=8&author=4587">Leo G.</a></li>
+                        <li><a href="/browsepage.php?category=8&author=7055">Timothy Morebu</a></li>
+                        <li><a href="/browsepage.php?category=8&author=9138">Matteo Migliorini</a></li>
+                        <li><a href="/browsepage.php?category=8&author=9428">Michael Stark</a></li>
+                        <li><a href="/browsepage.php?category=8&author=12702">Cellador Project</a></li>
+                        <li><a href="/browsepage.php?category=8&author=14692">TimJ Design</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=8">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=8&software=1">Autodesk Maya</a></li>
+                        <li><a href="/browsepage.php?category=8&software=8">Photoshop</a></li>
+                        <li><a href="/browsepage.php?category=8&software=50">Houdini</a></li>
+                        <li><a href="/browsepage.php?category=8&software=99">UDK</a></li>
+                        <li><a href="/browsepage.php?category=8&software=101">Unreal 4</a></li>
+                        <li><a href="/browsepage.php?category=8&software=128">Rizom Unfold 3D</a></li>
+                        <li><a href="/browsepage.php?category=8&software=130">mantra.</a></li>
+                        <li><a href="/browsepage.php?category=8&software=139">Adobe After Effects</a></li>
+                        <li><a href="/browsepage.php?category=8&software=145">Redshift</a></li>
+                        <li><a href="/browsepage.php?category=8&software=147">Houdini 18</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=8">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=14">
+                  <img src="../../images/icon/architecture.png" alt="icon">
+                  Architecture
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=14&subcategory=64">Essentials</a></li>
+                        <li><a href="/browsepage.php?category=14&subcategory=65">Software how-to</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=14">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=14&author=5">Fabio Maschietti</a></li>
+                        <li><a href="/browsepage.php?category=14&author=9138">Matteo Migliorini</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=14">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=14&software=21">None</a></li>
+                        <li><a href="/browsepage.php?category=14&software=24">3dsMax</a></li>
+                        <li><a href="/browsepage.php?category=14&software=46">Fusion</a></li>
+                        <li><a href="/browsepage.php?category=14&software=50">Houdini</a></li>
+                        <li><a href="/browsepage.php?category=14&software=130">mantra.</a></li>
+                        <li><a href="/browsepage.php?category=14&software=136">mantra</a></li>
+                        <li><a href="/browsepage.php?category=14&software=137">Houdini 17.5</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=14">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=15">
+                  <img src="../../images/icon/web-dev.png" alt="icon">
+                  Web Development
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=15&subcategory=71">Essentials</a></li>
+                        <li><a href="/browsepage.php?category=15&subcategory=72">Front End</a></li>
+                        <li><a href="/browsepage.php?category=15&subcategory=73">Backend</a></li>
+                        <li><a href="/browsepage.php?category=15&subcategory=74">Database</a></li>
+                        <li><a href="/browsepage.php?category=15&subcategory=75">Graphics</a></li>
+                        <li><a href="/browsepage.php?category=15&subcategory=76">Game Development</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=15">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=15&author=4587">Leo G.</a></li>
+                        <li><a href="/browsepage.php?category=15&author=6502">Mark Trego</a></li>
+                        <li><a href="/browsepage.php?category=15&author=12946">Daniel Scott</a></li>
+                        <li><a href="/browsepage.php?category=15&author=16272">Edward Boateng</a></li>
+                        <li><a href="/browsepage.php?category=15&author=18034">Radu Cius</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=15">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=15&software=8">Photoshop</a></li>
+                        <li><a href="/browsepage.php?category=15&software=12">Python</a></li>
+                        <li><a href="/browsepage.php?category=15&software=21">None</a></li>
+                        <li><a href="/browsepage.php?category=15&software=37">CSS</a></li>
+                        <li><a href="/browsepage.php?category=15&software=38">Dreamweaver</a></li>
+                        <li><a href="/browsepage.php?category=15&software=50">Houdini</a></li>
+                        <li><a href="/browsepage.php?category=15&software=51">HTML</a></li>
+                        <li><a href="/browsepage.php?category=15&software=52">Illustrator</a></li>
+                        <li><a href="/browsepage.php?category=15&software=94">JQuery</a></li>
+                        <li><a href="/browsepage.php?category=15&software=99">UDK</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=15">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-menu-inner-wrapper">
+                <a class="dropdown-item" href="/browsepage.php?category=16">
+                  <img src="../../images/icon/mobile-dev.png" alt="icon">
+                  Mobile Development
+                </a>
+                <div class="dropdown-menu-inner">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Subcategories</li>
+                        <li><a href="/browsepage.php?category=16&subcategory=66">Essentials</a></li>
+                        <li><a href="/browsepage.php?category=16&subcategory=67">Software how-to</a></li>
+                        <li><a href="/browsepage.php?category=16&subcategory=68">Front End</a></li>
+                        <li><a href="/browsepage.php?category=16&subcategory=69">Backend</a></li>
+                        <li><a href="/browsepage.php?category=16&subcategory=70">Database</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=16">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Authors</li>
+                        <li><a href="/browsepage.php?category=16&author=6502">Mark Trego</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=16">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                      <ul>
+                        <li class="filter-name">Tools</li>
+                        <li><a href="/browsepage.php?category=16&software=21">None</a></li>
+                        <li><a href="/browsepage.php?category=16&software=37">CSS</a></li>
+                        <li><a href="/browsepage.php?category=16&software=51">HTML</a></li>
+                        <li><a href="/browsepage.php?category=16&software=94">JQuery</a></li>
+                        <li>
+                          <a class="see-all" href="/browsepage.php?category=16">
+                            See all
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a class="dropdown-item" href="/browsepage.php?bundles=yes">
+                <i class="fab fa-dropbox"></i>
+                Browse Bundles
+              </a>
             </div>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/teaching-on-cgcircuit.php">
+              <i class="fa fa-microphone"></i>
               Teach
             </a>
           </li>
@@ -28,43 +786,69 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownWorkshop" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-comments fa fa-white"></i>
               Workshops
             </a>
+
             <div class="dropdown-menu" aria-labelledby="navbarDropdownWorkshop">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item disabled" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="/browsepage.php?contenttype=2">Browse Workshops...</a>
+              <a class="dropdown-item" href="/workshops/?tabName=how-it-works">Learn more about Workshops...</a>
             </div>
+          </li>
+        </ul>
+
+
+        <ul class="navigation-cta">
+          <li class="nav-form">
+            <form class="form-inline navigation-form" autocomplete="on">
+              <div class="form-group">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" required>
+
+                <button class="btn btn-none" type="submit">
+                  <img src="../../images/icon/magnifier.svg" alt="search">
+                </button>
+              </div>
+            </form>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMore" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-question-circle"></i>
               More
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMore">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-menu dropdown-menu-right  dropdown-menu-lg-right" aria-labelledby="navbarDropdownMore">
+              <a class="dropdown-item" href="http://help.cgcircuit.com">Help Center</a>
+              <a class="dropdown-item" href="/about-cgcircuit.php">About CGCircuit</a>
+              <a class="dropdown-item" href="/external-content.php">Community Content</a>
+              <a class="dropdown-item" href="/featuredinstructor.php">
+                <i class="fas fa-user-friends"></i>
+                The Instructors
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLogin" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Guest
+              <i class="fa fa-user fa fa-white"></i>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownLogin">
+              <a class="dropdown-item justify-content-between" href="/login.php">
+                Login
+                <i class="fa fa-user float-right"></i>
+              </a>
+
+              <a class="dropdown-item" href="/register.php">
+                Register
+              </a>
             </div>
           </li>
         </ul>
-
-        <form class="form-inline navigation-form" autocomplete="on">
-          <div class="form-group">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" required>
-
-            <button class="btn btn-none" type="submit">
-              <img src="../../images/icon/magnifier.svg" alt="search">
-            </button>
-          </div>
-        </form>
       </div>
 
-      <div class="navigation-cta">
-        <a href="#" class="btn btn-none">Sign In</a>
-        <a href="#" class="btn btn-lg btn-primary btn-cta">Get Started</a>
-      </div>
 
       <button class="toggle-button">
         <span></span>

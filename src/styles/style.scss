@@ -1,6 +1,9 @@
 @import "./variables";
 //3rd party
 @import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
 @import "~select2/src/scss/core";
 @import "~select2/src/scss/dropdown";
 @import "~select2/src/scss/multiple";
@@ -26,6 +29,8 @@
 // sections
 @import "./section/header";
 @import "./section/footer";
+//@import "./section/legacy/header";
+//@import "./section/legacy/footer";
 @import "./section/hero";
 @import "./section/filter";
 @import "./section/grid";

@@ -1,0 +1,52 @@
+footer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #222;
+
+  #fixed-container-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+  }
+
+  #account-update-notification {
+    display: block;
+    background-color: #999;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    bottom: 0;
+    padding: 15px;
+    width: 600px;
+    transform: translate(-50%, 0);
+    color: #fff;
+  }
+
+  .footer-social-icon a {
+    color: #9d9d9d;
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .text-white {
+    color: #fff;
+  }
+
+  ul li a {
+    color: #9d9d9d;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+a.logo-bt span {
+  display: none;
+}

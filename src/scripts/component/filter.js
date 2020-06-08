@@ -4,7 +4,7 @@ import noUiSlider from 'nouislider';
 
 export default class Filter {
   constructor(data) {
-    this.current = [];
+    this.current = {};
     this.slider = {};
     this.data = data;
     this.filterBadgeWrapper = document.querySelector('.filter-result ul');
@@ -13,8 +13,14 @@ export default class Filter {
 
     $('.filter-form select.select2').on('change', e => {
       let el = e.target;
+
       if (el.value !== 'all') {
-        this.addBreadcrumb(el.id, el.options[el.selectedIndex].text);
+        this.addBreadcrumb({
+          [el.id]: {
+            name: el.options[el.selectedIndex].text,
+            value: $(el).val().toLowerCase()
+          }
+        }, el.id);
       } else {
         this.removeBreadcrumb(el.id);
       }
@@ -23,7 +29,7 @@ export default class Filter {
     $('input#search').on('keyup', e => {
       let el = e.target;
       if (el.value.length > 2) {
-        this.addBreadcrumb(el.id, el.value);
+        this.addBreadcrumb({search: {name: 'Search', value: el.value.toLowerCase()}}, 'search');
       } else {
         this.removeBreadcrumb(el.id);
       }
@@ -38,7 +44,7 @@ export default class Filter {
         this.removeBreadcrumb(el.id);
         el.classList.remove('active');
       } else {
-        this.addBreadcrumb(el.id, el.innerText);
+        this.addBreadcrumb({price: {name: 'Free', value: 'free'}}, 'price');
         el.classList.add('active');
       }
 
@@ -47,7 +53,7 @@ export default class Filter {
 
     this.slider.on('set', val => {
       val = [parseInt(val[0].substring(0, val[0].length - 2)), parseInt(val[1].substring(0, val[1].length - 2))];
-      this.addBreadcrumb('price', val);
+      this.addBreadcrumb({price: {name: 'Range', value: val}}, 'price');
       this.getBreadcrumbControl('price').classList.remove('active');
       document.querySelector('#range-wrapper').classList.remove('inactive');
     });
@@ -70,35 +76,36 @@ export default class Filter {
     return this.filterControlWrapper.querySelector('#' + key);
   }
 
-  addBreadcrumb(key, val) {
-    let isRangeSlider = typeof val == 'object';
-    let text = isRangeSlider ? '$' + val[0] + ' - $' + val[1] : val;
+  addBreadcrumb(key, type) {
+    let item = key[type];
+    let isRangeSlider = item.name.toLowerCase() === 'range';
+    let isSearch = item.name.toLowerCase() === 'search';
+    let text = isRangeSlider ? '$' + item.value[0] + ' - $' + item.value[1] : isSearch ? item.value : item.name;
 
-    if (this.current[key]) {
+    if (Object.keys(this.current).length && !!this.current[type]) {
       // update existed if already in breadcrumbs
-      let crumb = this.getBreadcrumbBadge(key);
+      let crumb = this.getBreadcrumbBadge(type);
       crumb.childNodes[0].nodeValue = text;
     } else {
       // create new if not in breadcrumbs
       let crumb = document.createElement('li');
-      crumb.dataset.key = key.toLowerCase();
-      crumb.dataset.id = key.toLowerCase();
+      crumb.dataset.key = type.toLowerCase();
+      crumb.dataset.id = item.value;
       crumb.innerHTML = `${text}<span class=\"remove\"></span>`;
       crumb.querySelector('.remove').addEventListener('click', (e) => {
-        this.removeBreadcrumb(key);
+        this.removeBreadcrumb(type);
       }, false);
       this.filterBadgeWrapper.prepend(crumb);
     }
 
-    if (isRangeSlider) {
-      this.current[key] = val;
-    } else {
-      this.current[key] = text;
-    }
+    this.current[type] = {
+      name: item.name,
+      value: item.value,
+      type: type
+    };
 
     this.show();
     app.update();
-    this.updateCounter(Object.keys(this.getCurrentBreadcrumbsList()).length);
   }
 
   removeBreadcrumb(key) {
@@ -131,7 +138,6 @@ export default class Filter {
     }
 
     app.update();
-    this.updateCounter(Object.keys(this.getCurrentBreadcrumbsList()).length);
   }
 
   clear() {
@@ -150,7 +156,7 @@ export default class Filter {
     $(this.filterBadgeWrapper).show();
   }
 
-  updateCounter(count){
+  updateCounter(count) {
     $('.btn#clear span').text(count)
   }
 

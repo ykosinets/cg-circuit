@@ -120,3 +120,9 @@ $rect-sizes: (
     background: $c;
   }
 }
+
+.d-sx-inline{
+  @media screen and(min-width: 375px){
+    display: inline !important;
+  }
+}

@@ -1,46 +1,66 @@
 export default class ProductList {
   constructor(data) {
     this.gridElement = document.querySelector('#product-list');
-    let width = $(window).width();
     this.perRow = parseInt($('.btn-count.active').data('count'));
     this.rowsCount = 0;
     this.data = data;
     this.length = 0;
+    this.flag = true;
+    this.border = 100;
+    this.currentBlockSize = this.border;
 
-    data = this.data.slice(this.getOffset(), this.perRow + this.getOffset());
-
-    this.render(data);
-
+    data = app.getProductData().slice(this.getOffset(), this.perRow + this.getOffset());
     let scrollIndicator = document.querySelector('.btn-loading');
 
     $(scrollIndicator).on('click', (e) => {
       e.preventDefault();
+      $(e.target).addClass('hidden');
+      this.currentBlockSize += this.border;
       data = this.data.slice(this.getOffset(), this.perRow + this.getOffset());
       this.render(data);
     });
 
     //Infinite Scroll
     $(window).on("scroll", () => {
-      if (this.getOffset() >= this.data.length) {
-        $(scrollIndicator).hide();
-        return false;
-      } else {
-        // if($(scrollIndicator).isVisible)
+      this.loadMore();
+    });
+
+    this.loadMore();
+  }
+
+  loadMore() {
+    let data = app.getProductData().slice(this.getOffset(), this.perRow + this.getOffset());
+    let scrollIndicator = document.querySelector('.btn-loading');
+    let scrollHeight = $(document).height();
+    let scrollPos = $(window).height() + $(window).scrollTop();
+
+    if (this.rowsCount - 1 <= 0) {
+      this.rowsCount = 5;
+      if(this.data) {
+        data = this.data.slice(0, this.getOffset());
+      }
+      this.render(data);
+    }
+
+    if ((this.getOffset() - this.perRow) < this.currentBlockSize) {
+      $(scrollIndicator).addClass('hidden');
+
+      if ((scrollIndicator.offsetTop >= scrollPos) / scrollHeight === 0) {
+        if (!this.data) return;
+
+        data = this.data.slice(this.getOffset(), this.perRow + this.getOffset());
+        this.render(data);
       }
 
-      //page height
-      let scrollHeight = $(document).height();
-      //scroll position
-      let scrollPos = $(window).height() + $(window).scrollTop();
-      // fire if the scroll position is 300 pixels above the bottom of the page
-      if ((scrollIndicator.offsetTop >= scrollPos) / scrollHeight === 0) {
-        $(scrollIndicator).click();
-      }
-    });
+      scrollIndicator.innerHTML = 'Loading...';
+    } else {
+      scrollIndicator.innerHTML = 'Continue to load';
+      $(scrollIndicator).removeClass('hidden');
+    }
   }
 
   getOffset() {
-    return this.rowsCount * this.perRow;
+    return (this.rowsCount - 1) * this.perRow;
   }
 
   clear(data) {
@@ -48,6 +68,7 @@ export default class ProductList {
     this.perRow = parseInt($('.btn-count.active').data('count'));
     this.rowsCount = 0;
     this.data = data;
+    this.currentBlockSize = this.border;
   }
 
   render(data, flag) {
@@ -115,7 +136,7 @@ class Product {
 
     product.price.template = `<div class="price">
             <span class="price-current text-${isFree ? 'success' : 'primary'}">${isFree ? 'Free' : '$' + price.current}</span>
-            ${isDiscount ? `<span class="price-full">$${price.full}</span><span class="sale-badge text-danger">${bundle.discount} OFF</span>` : ''}
+            ${!isFree && !isSame && !isBundle ? `<span class="price-full">$${price.full}</span><span class="sale-badge text-danger">${bundle.discount} OFF</span>` : ''}
             
             ${isBundle ? `<span class="additional-link" data-toggle="popover" data-trigger="hover" data-html="true" data-content="${product.courses}">${product.contenttype} ${product.info.icon}</span>` : `<span class="additional-link">${product.contenttype}</span>`}
       </div>`;
@@ -123,7 +144,7 @@ class Product {
     product.template = `<div class="card">
           <a href="${product.url}" class="card-header">
             <img src="${product.thumbnail}" class="card-img-top" alt="">      
-            ${isBundle && isDiscount ? `<span class="badge badge-danger">Bundle ${bundle.discount} Savings</span>` : ''} 
+            ${isBundle && !isFree ? `<span class="badge badge-danger">Bundle ${bundle.discount} Savings</span>` : ''} 
           </a>
       
           <div class="card-body">

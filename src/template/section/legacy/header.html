@@ -1,0 +1,481 @@
+<div id="header-container">
+  <div id="cookieContainer"></div>
+  <div class="main-site-information hidden">
+    <div class="close-button">
+      <i class="fa fa-times fa-2x fa-inverse" aria-hidden="true"></i>
+    </div>
+
+    <iframe id="main-site-information-container" src="" frameborder="0" scrolling="no"
+            style="width:100%;height:100%;overflow:hidden"></iframe>
+  </div>
+
+  <a class="brand-top" href="/">
+    <img class="cdn-content" src="/images/logo.png" alt="CGCircuit">
+  </a>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img class="cdn-content main-cgc-header-logo" src="/images/logo.png" alt="CGCircuit">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#" id="learndropdown" class="dropdown-toggle" data-toggle="dropdown" role="button"
+               aria-haspopup="true" aria-expanded="false">Browse <span class="caret"></span></a>
+            <ul id="learn-menu" class="dropdown-menu">
+              <li>
+                <div class="browse-menu-container">
+                  <div class="row">
+                    <div class="col-sm-4 menu-categories"
+                         style="padding: 10px 0; border-right: 1px solid rgba(0,0,0,0.2);">
+
+                      <div class="row">
+                        <div class="col-sm-12" id="browse-all-categories">
+                          <a href="/browsepage.php">
+                            <img class="category-icon browse-all cdn-content"
+                                 src="/images/header-menu/browse-all-categories.png">
+                            <span>Browse All...</span>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="divider"></div>
+
+                      <div class="row">
+                        <div class="col-sm-12" id="browse-only-exclusive-content">
+                          <a href="/browsepage.php?exclusiveContent=yes">
+                            <span class="fa-header-icon excl-icon fa fa-star fa-2x"></span>
+                            <span>Browse Exclusive Content</span>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="divider"></div>
+
+                      <span class="filter-name" style="padding-left: 10px;">CATEGORIES</span>
+                      <div id="menu-categories"></div>
+
+                      <div class="divider"></div>
+
+                      <div class="row">
+                        <div class="col-sm-12" id="browse-only-bundles">
+                          <a href="/browsepage.php?bundles=yes">
+                            <span class="fa-header-icon bundles-icon fa fa-dropbox fa-2x"></span>
+                            <span>Browse Bundles</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-8 menu-category-filters my-hidden-xs" id="category-filters">
+                      <div class="row" data-category-filters="1">
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <ul>
+                                <li>Subcategories</li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-4">
+                              <ul>
+                                <li>Authors</li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-4">
+                              <ul>
+                                <li>Tools</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li id="teach-course">
+            <!--<a href="/create-course.php" id="teachdropdown"><i class='fa fa-microphone fa fa-white'></i>Teach</a>-->
+            <a href="#"><i class='fa fa-microphone fa fa-white'></i> Teach<b class="caret"></b></a>
+            <ul class="course-type-container-mobile visible-xs-block" style="display: none!important;">
+              <li>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-3 col-md-3"></div>
+                    <div class="col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <label for="course-title-mobile" style="color: #fff">Give a title to your content</label>
+                        <input type="text" class="form-control" id="course-title-mobile"
+                               placeholder="Enter the title of your course" maxlength="40" value="My Awesome tutorial">
+                      </div>
+                      <div class="alert alert-danger content-type-error hidden"></div>
+                    </div>
+                    <div class="col-sm-3 col-md-3"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3 col-md-3"></div>
+                    <div class="col-sm-6 col-md-6 text-center" style="padding: 10px">
+                      <span style="color: #fff;">Choose a type to your content</span>
+                    </div>
+                    <div class="col-sm-3 col-md-3"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3 col-md-3">
+                      <a class="thumbnail active content-type-thumb text-center" href="#"
+                         id="single-video-type-lnk-mobile" data-content-type="5">
+                        <div class="thumbnail-icon-container">
+                          <i class="fa fa-file-video-o fa-4x" aria-hidden="true"></i>
+                        </div>
+                        <div class="caption">
+                          <h3>Single Video</h3>
+                          <p>Upload a single video. It can be a short film, or a tutorial, or a demo reel. It's up to
+                            you.</p>
+                        </div>
+                        <img class="ribbon-top-left-menu" src="/images/corner-ribbons/new-ribbon.png">
+                      </a>
+                    </div>
+
+                    <div class="col-sm-3 col-md-3">
+                      <a class="thumbnail content-type-thumb text-center" href="#" id="text-based-type-lnk-mobile"
+                         data-content-type="2">
+                        <div class="thumbnail-icon-container">
+                          <i class="fa fa-html5 fa-4x" aria-hidden="true"></i>
+                        </div>
+                        <div class="caption">
+                          <h3>Text based</h3>
+                          <p>This type allows you to create a simple text tutorial and share it with the world.</p>
+                        </div>
+                        <img class="ribbon-top-left-menu" src="/images/corner-ribbons/new-ribbon.png">
+                      </a>
+                    </div>
+
+                    <div class="col-sm-3 col-md-3">
+                      <a class="thumbnail content-type-thumb text-center" href="#" id="tutorial-type-lnk-mobile"
+                         data-content-type="0">
+                        <div class="thumbnail-icon-container">
+                          <i class="fa fa-microphone fa-4x" aria-hidden="true"></i>
+                        </div>
+                        <div class="caption">
+                          <h3>Tutorial Video Series</h3>
+                          <p>Create, share or sell an instructional pre-recorded video series. Generate passive
+                            income.</p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-sm-3 col-md-3">
+                      <a class="thumbnail content-type-thumb text-center" href="#" id="workshop-type-lnk-mobile"
+                         data-content-type="1">
+                        <div class="thumbnail-icon-container">
+                          <i class="fa fa-comments fa-4x" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="caption">
+                          <h3>Workshop</h3>
+                          <p>Premium Content! Pick a date and teach a group of students. Give them assignments and
+                            feedback.</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li id="dividerMyCourses" class="divider-vertical"></li>
+
+          <li id="my-courses-menu" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Courses<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li class="">
+                <a id="learning-submenu" href="#">
+                  <i class="fa fa-desktop fa fa-white">&nbsp;</i>
+                  Learning
+                </a>
+              </li>
+
+              <li class="divider"></li>
+
+              <li class="">
+                <a id="teaching-submenu" href="#">
+                  <i class="fa fa-microphone fa fa-white">&nbsp;</i>
+                  Teaching
+                </a>
+              </li>
+
+              <li class="divider"></li>
+
+              <li>
+                <a href="/manage-favorites.php">
+                  <i class="fa fa-heart">&nbsp;</i>
+                  Manage Favorites...</a>
+              </li>
+            </ul>
+          </li>
+
+          <li id="workshops" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="/modules/workshops/html/index.html"
+               id="workshopdropdown"><i class='fa fa-comments fa fa-white'></i> Workshops <b
+              class="caret"></b> </a>
+
+            <ul id="workshops-menu" class="dropdown-menu">
+              <li><a id="browse-workshop" href="/browsepage.php?contenttype=2">Browse
+                Workshops...</a></li>
+
+              <li>
+                <a id="browse-workshop-about" href="/modules/workshops/html/index.html?tabName=how-it-works">
+                  Learn more about Workshops...
+                </a>
+              </li>
+
+              <div id="my-workshops-container" class="hidden">
+                <li class="divider"></li>
+                <li class="dropdown-header">My Current Workshops</li>
+                <li class="current-workshops"><a href="#">&nbsp;</a></li>
+              </div>
+            </ul>
+          </li>
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right">
+          <li id="search-btn-itm">
+            <a role="button" id="search-button">
+              <span class="fa fa-search"></span>
+            </a>
+          </li>
+
+          <li id="cart-container">
+            <a href="/shoppinglist.php"> <i class="fa fa-shopping-cart fa fa-white"></i> <span
+              id="cartnumber"> (0) </span> </a>
+          </li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> More <i
+              class="fa fa-question-circle"></i> <b class="caret"></b></a>
+            <ul class="dropdown-menu" id="help-menu">
+              <li><a href="http://help.cgcircuit.com"><i class="fa fa-question-sign fa fa-white pull-right"></i>Help
+                Center </a></li>
+              <li><a href="/about-cgcircuit.php"><i class="fa fa-info-sign fa fa-white pull-right"></i>About
+                CGCircuit </a></li>
+              <li><a href="/external-content.php"><i class="fa fa-starpull-right"></i>Community Content
+              </a></li>
+              <li><a href="/featuredinstructor.php"><i class="fa fa-group fa fa-white pull-right"></i>The
+                Instructors</a></li>
+              <li class="divider divider-forum"></li>
+              <li class="dropdown-header forumlabel">Forums</li>
+              <li class="listforum"><a class="forum-link " href="/forum.php?val=general">General</a></li>
+              <li class="listforum"><a class="forum-link " href="/forum.php?val=topic-requests">Request a
+                Course</a></li>
+            </ul>
+          </li>
+
+          <li class="divider-vertical"></li>
+
+          <li id="usermenu" class="dropdown">
+            <a id="nameuser" href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <b>User Name</b>
+              <i class="fa fa-user fa fa-white"></i>
+              <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu" id="h-account-list">
+              <li id="headerLogin">
+                <a title="Login to your account" href="/login.php"><i class="fa fa-user pull-right"></i>
+                  Login </a>
+              </li>
+
+              <li id="headerAccount">
+                <a title="My account settings" href="/accountsettings.php"><i
+                  class="fa fa-user pull-right"></i> My Account </a>
+              </li>
+
+              <li id="headerTeacherProfile">
+                <a title="Edit my teacher profile" href="/myteacherprofile.php"><i
+                  class="fa fa-microphone pull-right"></i> My Author Settings </a>
+              </li>
+
+              <li id="headerMyPublicProfile">
+                <a title="Show my Public profile page" href="#"><i class="fa fa-picture pull-right"></i>
+                  My Public Profile </a>
+              </li>
+
+              <li id="headerDividerStat" class="divider"></li>
+
+              <li id="headerStats" class="dropdown-header">Stats</li>
+
+              <li id="headerMySales">
+                <a title="View my sales graphs" href="/mySales.php">
+                  <i class="fa fa-signal pull-right"></i> My Sales
+                </a>
+              </li>
+
+              <li id="headerDividerAdmin" class="divider"></li>
+
+              <li id="headerAdminHeader" class="dropdown-header">Admin Area</li>
+
+              <li id="headerAdminQuery">
+                <a title="Admin Control Panel" id="query" href="/cpanel" class="dir">Control Panel</a>
+              </li>
+
+              <li id="headerAdminQueryWorkshopDashboard">
+                <a title="Workshops Dashboard" id="workshopQuery" href="/workshop-dashboard" class="dir">
+                  Workshops Dashboard
+                </a>
+              </li>
+
+              <li id="headerAdminControlPanel">
+                <a title="Admin Control Panel" id="publish" href="/publish-courses.php" class="dir">
+                  Course Publish Queue
+                </a>
+              </li>
+
+              <li id="headerDividerLogoff" class="divider"></li>
+
+              <li id="headerLogoff">
+                <a id="logoff" href="/logout.php">
+                  <i class="fa fa-power-off fa fa-white pull-right"></i>
+                  Sign Out
+                </a>
+              </li>
+
+              <li id="headerRegister">
+                <a id="register" href="/register.php">Register</a>
+              </li>
+
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+      <ul class="course-type-container my-hidden-xs" style="display: none">
+        <li>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3 col-md-3"></div>
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label for="course-title" style="color: #fff">Give a title to your content</label>
+                  <input type="text" class="form-control" id="course-title" placeholder="Enter the title of your course"
+                         maxlength="40" value="My Awesome tutorial">
+                </div>
+                <div class="alert alert-danger content-type-error hidden"></div>
+              </div>
+              <div class="col-sm-3 col-md-3"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-3 col-md-3"></div>
+              <div class="col-sm-6 col-md-6 text-center" style="padding: 10px">
+                <span style="color: #fff;">Choose a type to your content</span>
+              </div>
+              <div class="col-sm-3 col-md-3"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-3 col-md-3">
+                <a class="thumbnail active content-type-thumb text-center" href="#" id="single-video-type-lnk"
+                   data-content-type="5">
+                  <div class="thumbnail-icon-container">
+                    <i class="fa fa-file-video-o fa-4x" aria-hidden="true"></i>
+                  </div>
+                  <div class="caption">
+                    <h3>Single Video</h3>
+                    <p>Upload a single video. It can be a short film, or a tutorial, or a demo reel. It's up to you.</p>
+                  </div>
+                  <img class="ribbon-top-left-menu" src="/images/corner-ribbons/new-ribbon.png">
+                </a>
+              </div>
+
+              <div class="col-sm-3 col-md-3">
+                <a class="thumbnail content-type-thumb text-center" href="#" id="text-based-type-lnk"
+                   data-content-type="2">
+                  <div class="thumbnail-icon-container">
+                    <i class="fa fa-html5 fa-4x" aria-hidden="true"></i>
+                  </div>
+                  <div class="caption">
+                    <h3>Text based</h3>
+                    <p>This type allows you to create a simple text tutorial and share it with the world.</p>
+                  </div>
+                  <img class="ribbon-top-left-menu" src="/images/corner-ribbons/new-ribbon.png">
+                </a>
+              </div>
+
+              <div class="col-sm-3 col-md-3">
+                <a class="thumbnail content-type-thumb text-center" href="#" id="tutorial-type-lnk"
+                   data-content-type="0">
+                  <div class="thumbnail-icon-container">
+                    <i class="fa fa-microphone fa-4x" aria-hidden="true"></i>
+                  </div>
+                  <div class="caption">
+                    <h3>Tutorial Video Series</h3>
+                    <p>Create, share or sell an instructional pre-recorded video series. Generate passive income.</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-sm-3 col-md-3">
+                <a class="thumbnail content-type-thumb text-center" href="#" id="workshop-type-lnk"
+                   data-content-type="1">
+                  <div class="thumbnail-icon-container">
+                    <i class="fa fa-comments fa-4x" aria-hidden="true"></i>
+                  </div>
+                  <div class="caption">
+                    <h3>Workshop</h3>
+                    <p>Premium Content! Pick a date and teach a group of students. Give them assignments and
+                      feedback.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div id="search-box-container" style="display: none">
+        <div class="input-group">
+          <input type="text" class="form-control" id="search-box" placeholder="Search for..."/>
+          <span class="input-group-btn">
+            <button class="btn btn-default" id="cgc-general-search-button" type="button">
+              <span class="fa fa-search"></span>
+            </button>
+          </span>
+        </div>
+
+        <div class="center-block" id="search-result-container">
+          <div id="search-content-section">
+            <h5 class="search-result-title">Courses</h5>
+            <hr>
+            <ul id="content-search-result" class="list-unstyled"></ul>
+          </div>
+
+          <div id="search-authors-section">
+            <h5 class="search-result-title">Authors</h5>
+
+            <hr>
+            <ul id="authors-search-result" class="list-unstyled"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

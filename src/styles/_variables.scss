@@ -9,6 +9,7 @@ $path: (
   img: '../images'
 );
 
+
 $path-font: map-get($path, font);
 $path-img: map-get($path, img);
 // colors
@@ -34,6 +35,9 @@ $dark: #222222;
 $state-active: '&:hover, &:focus, &:active, &:active:hover, &:active:focus';
 
 //3rd party assets
+//fontawesome
+$fa-font-path: "../fonts/Fontawesome";
+
 //bootstrap
 $yiq-text-dark: $white;
 $font-family-base: $helvetica-neue;
@@ -96,6 +100,7 @@ $dropdown-link-active-color: $primary;
 $dropdown-link-active-bg: $dark;
 $dropdown-link-disabled-color: $grey-dark;
 $dropdown-font-size: 12px;
+$dropdown-header-color: $white;
 
 // form controls
 $input-box-shadow: none;
@@ -105,7 +110,7 @@ $input-border-radius: 4px;
 // card
 $card-cap-bg: $white;
 $card-border-width: 0;
-$card-border-radius: 10px;
+$card-border-radius: 4px;
 $card-bg: $white;
 $card-spacer-x: 0;
 $card-spacer-y: 0;
@@ -144,13 +149,14 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1470px,
-  xxl: 1920px
+  xxl: 1944px
 );
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1470px
+  xl: 1470px,
+  xxl: 1944px
 ) !default;
 
 

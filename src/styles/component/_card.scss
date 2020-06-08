@@ -1,11 +1,19 @@
 .card {
   height: 100%;
   text-align: left;
-  font-family: $helvetica-neue;
-  box-shadow: 0 10px 20px rgba(#2f3a54, .1);
+  font-family: $helvetica;
+  box-shadow: 0 8px 10px rgba(47, 58, 84, .3);
 
   &-group {
+    text-align: center;
     @extend .row;
+
+    & > span {
+      display: block;
+      font-size: 20px;
+      width: 100%;
+      color: $grey-dark;
+    }
   }
 
   &-wrapper {
@@ -315,7 +323,7 @@
 
       &-current {
         font-size: 15px;
-        font-weight: 900;
+        font-weight: 700;
         text-transform: uppercase;
         line-height: 24px;
         margin-bottom: 0;
@@ -409,5 +417,15 @@
 
   li {
     padding: 2px 0;
+  }
+}
+
+
+.btn-loading {
+
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
 }
