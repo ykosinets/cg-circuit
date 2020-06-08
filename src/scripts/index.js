@@ -32,10 +32,8 @@ let isInArray = (arr, value) => arr.find(o => o.id === parseInt(value));
 let isFree = product => product.purchasePrice === 0;
 
 let isPrice = (product, price) => !price ? true : (price.name.toLowerCase() === 'free' ? isFree(product) : price.name.toLowerCase() === 'range' ? isInPriceRange(product, price) : false);
-let isContentType = (product, type) => {
-  console.log(type.value === 'exclusive');
-  return !type ? true : type.value === 'exclusive' ? product.exclusiveContent : product.contentType && (product.contentType.toLowerCase() === type.name.toLowerCase() || product.contentType.toLowerCase() === type.value.toLowerCase());
-}
+let isContentType = (product, type) => !type ? true : type.value === 'exclusive' ? product.exclusiveContent : product.contentType && (product.contentType.toLowerCase() === type.name.toLowerCase() || product.contentType.toLowerCase() === type.value.toLowerCase());
+
 let isCategory = (product, category) => !category ? true : product.category && isInArray(product.category, category.value);
 let isAuthor = (product, author) => !author ? true : product.authorId && product.authorId === parseInt(author.value);
 let isLevel = (product, level) => !level ? true : product.levelId && product.levelId === parseInt(level.value);
@@ -174,7 +172,6 @@ class App {
     if (this.filters && Object.keys(this.filters.current).length) {
 
       data = data.filter((product) => {
-        // console.log();
         return (
           isPrice(product, this.filters.current.price)
           && isContentType(product, this.filters.current.contenttype)

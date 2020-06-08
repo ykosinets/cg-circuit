@@ -1,39 +1,41 @@
 <footer class="page-footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-10 offset-md-1">
-        ${require('../component/logo.html').default}
+      <div class="footer-menu-column col-lg-2 col-md-3 col-sm-6">
+        <h4 class="footer-menu-column-title">Links</h4>
 
-        <div class="footer-menu-column">
-          <h4 class="footer-menu-column-title">Links</h4>
+        <ul class="footer-menu">
+          <li><a href="#">About CG Circuit</a></li>
+          <li><a href="#">Instructors</a></li>
+          <li><a href="#">Our video player</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
 
-          <ul class="footer-menu">
-            <li><a href="#">About CG Circuit</a></li>
-            <li><a href="#">Instructors</a></li>
-            <li><a href="#">Our video player</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
+      <div class="footer-menu-column col-lg-2 col-md-3 col-sm-6">
+        <h4 class="footer-menu-column-title">Help</h4>
 
-        <div class="footer-menu-column">
-          <h4 class="footer-menu-column-title">Help</h4>
+        <ul class="footer-menu">
+          <li><a href="#">How to create a Course</a></li>
+          <li><a href="#">FAQ page</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">DMCA Notice</a></li>
+        </ul>
+      </div>
 
-          <ul class="footer-menu">
-            <li><a href="#">How to create a Course</a></li>
-            <li><a href="#">FAQ page</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Cookies</a></li>
-            <li><a href="#">DMCA Notice</a></li>
-          </ul>
-        </div>
+      <div class="footer-menu-column col-lg-4 col-md-3 col-sm-6">
+        <h4 class="footer-menu-column-title">Contact With Us</h4>
 
+        ${require('../component/socials.html').default}
+      </div>
+
+      <div class="footer-menu-column col-lg-4 col-md-3 col-sm-6">
         <p class="copyright">
           Copyright&nbsp;&copy;&nbsp;2020&nbsp;CGCircuit&nbsp;LLC<br>
           All&nbsp;logos&nbsp;and&nbsp;trademarks
           are&nbsp;the&nbsp;properties&nbsp;of&nbsp;their respective&nbsp;owners.
         </p>
-
-        ${require('../component/socials.html').default}
       </div>
     </div>
   </div>
