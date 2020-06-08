@@ -127,6 +127,13 @@ class App {
       if (this.productList) this.productList.perRow = current;
       this.update();
     });
+
+    $('[data-expand]').on('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      document.querySelector(this.dataset.expand).classList.toggle('active');
+    })
   }
 
   getFiltersData() {

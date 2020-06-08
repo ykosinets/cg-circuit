@@ -3,6 +3,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 @import "~select2/src/scss/core";
 @import "~select2/src/scss/dropdown";
@@ -26,6 +27,7 @@
 @import "./component/card";
 @import "./component/socials";
 @import "./component/slider";
+@import "./component/header-expander";
 // sections
 @import "./section/header";
 @import "./section/footer";

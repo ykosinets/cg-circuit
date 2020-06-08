@@ -777,7 +777,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/teaching-on-cgcircuit.php">
+            <a class="nav-link" data-expand="#course-type-container" href="/teaching-on-cgcircuit.php">
               <i class="fa fa-microphone"></i>
               Teach
             </a>
@@ -858,3 +858,88 @@
     </div>
   </div>
 </header>
+
+<div id="course-type-container" class="course-type-container bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3">
+        <div class="form-group">
+          <label for="course-title">Give a title to your content</label>
+          <input type="text" class="form-control" id="course-title"
+                 placeholder="Enter the title of your course"
+                 maxlength="40" value="My Awesome tutorial">
+        </div>
+        <div class="alert alert-danger content-type-error d-none"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3 text-center p-2 text-white">
+        <p>Choose a type to your content</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3 col-md-3">
+        <a class="thumbnail active content-type-thumb text-center" href="#"
+           id="single-video-type-lnk" data-content-type="5">
+          <div class="thumbnail-icon-container">
+            <i class="far fa-file-video fa-4x" aria-hidden="true"></i>
+          </div>
+
+          <div class="caption">
+            <h3>Single Video</h3>
+            <p>Upload a single video. It can be a short film, or a tutorial, or a demo reel. It's up to you.</p>
+          </div>
+
+          <img class="ribbon-top-left-menu" src="http://cgcircuit.com/images/corner-ribbons/new-ribbon.png"
+               alt="ribbon">
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a class="thumbnail content-type-thumb text-center" href="#"
+           id="text-based-type-lnk" data-content-type="2">
+          <div class="thumbnail-icon-container">
+            <i class="fab fa-html5 fa-4x" aria-hidden="true"></i>
+          </div>
+
+          <div class="caption">
+            <h3>Text based</h3>
+            <p>This type allows you to create a simple text tutorial and share it with the world.</p>
+          </div>
+
+          <img class="ribbon-top-left-menu" src="http://cgcircuit.com/images/corner-ribbons/new-ribbon.png"
+               alt="ribbon">
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a class="thumbnail content-type-thumb text-center" href="#"
+           id="tutorial-type-lnk" data-content-type="0">
+          <div class="thumbnail-icon-container">
+            <i class="fa fa-microphone fa-4x" aria-hidden="true"></i>
+          </div>
+
+          <div class="caption"><h3>Tutorial Video Series</h3>
+            <p>Create, share or sell an instructional pre-recorded video series. Generate passive income.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a class="thumbnail content-type-thumb text-center" href="#"
+           id="workshop-type-lnk" data-content-type="1">
+          <div class="thumbnail-icon-container">
+            <i class="fa fa-comments fa-4x" aria-hidden="true"></i>
+          </div>
+
+          <div class="caption">
+            <h3>Workshop</h3>
+            <p>Premium Content! Pick a date and teach a group of students. Give them assignments and feedback.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

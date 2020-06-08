@@ -1,0 +1,79 @@
+.course-type-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: .3s max-height ease-in-out, .3s padding ease-in-out, .3s opacity ease-in-out;
+
+  &.active {
+    opacity: 1;
+    padding-top: 78px;
+    padding-bottom: 30px;
+    max-height: 100vh;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .thumbnail {
+    background: $white;
+    color: $dark;
+    text-decoration: none;
+    position: relative;
+    padding: 4px;
+    border-radius: $border-radius;
+    height: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+    .caption {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding-bottom: 20px;
+    }
+
+    &-icon-container {
+      margin: 15px 0 0 0;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    p {
+      font-size: 13px;
+      padding: 0 15px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    &-icon-container,
+    h3 {
+      color: $primary;
+      transition: .3s color ease-in-out;
+    }
+
+    &:hover {
+      .thumbnail-icon-container,
+      h3 {
+        color: darken($primary, 20%);
+      }
+    }
+  }
+
+  .ribbon-top-left-menu {
+    position: absolute;
+    left: -4px;
+    top: -5px;
+  }
+}
