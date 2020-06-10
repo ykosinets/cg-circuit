@@ -200,6 +200,15 @@
       }
     }
 
+    .dropdown-user .dropdown-menu .dropdown-item {
+      .fa, .fas, .fab, .far {
+        font-size: 12px;
+        padding: 0;
+        width: auto;
+        height: auto;
+      }
+    }
+
     .dropdown-menu {
       max-height: 0;
       display: block !important;

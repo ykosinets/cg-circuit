@@ -777,10 +777,29 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/teaching-on-cgcircuit.php">
+            <a class="nav-link" data-expand="#course-type-container" href="/teaching-on-cgcircuit.php">
               <i class="fa fa-microphone"></i>
               Teach
             </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMyCourses" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-comments fa fa-white"></i>
+              My Courses
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMyCourses">
+              <a class="dropdown-item" href="/browse-learning.php">
+                <i class="fa fa-desktop fa fa-white">&nbsp;</i>Learning
+              </a>
+              <a class="dropdown-item" href="/browse-teaching.php">
+                <i class="fa fa-microphone fa fa-white">&nbsp;</i>Teaching
+              </a>
+              <a class="dropdown-item" href="/manage-favorites.php"><i class="fa fa-heart">&nbsp;</i> Manage
+                Favorites...</a>
+            </div>
           </li>
 
           <li class="nav-item dropdown">
@@ -811,6 +830,13 @@
             </form>
           </li>
 
+          <li class="nav-item cart">
+            <a href="/shoppinglist.php">
+              <i class="fa fa-shopping-cart fa fa-white"></i>
+              <span id="cartnumber"> (0)</span>
+            </a>
+          </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMore" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -828,21 +854,33 @@
             </div>
           </li>
 
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown dropdown-user">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLogin" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Guest
+              Username
               <i class="fa fa-user fa fa-white"></i>
             </a>
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdownLogin">
-              <a class="dropdown-item justify-content-between" href="/login.php">
-                Login
+              <a class="dropdown-item justify-content-between" href="/accountsettings.php">
+                My Account
                 <i class="fa fa-user float-right"></i>
               </a>
 
-              <a class="dropdown-item" href="/register.php">
-                Register
+              <a class="dropdown-item" href="/teacherprofilecomplete.php?val=20139">
+                My Public Profile
+              </a>
+
+              <a class="dropdown-item justify-content-between" href="/mySales.php">
+                My Sales
+
+                <i class="fas fa-signal float-right"></i>
+              </a>
+
+              <a class="dropdown-item justify-content-between" href="/logout.php">
+                Sign Out
+
+                <i class="fas fa-power-off float-right"></i>
               </a>
             </div>
           </li>
